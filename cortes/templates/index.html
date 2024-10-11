@@ -1,0 +1,888 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>La Corte 1642</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Restaurantly
+  * Updated: Sep 20 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-center justify-content-md-between">
+
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-phone d-flex align-items-center"><span>+237 695 34 45 32</span></i>
+        <i class="bi bi-clock d-flex align-items-center ms-4"><span> Lundi à Samedi : 11h30 / 14h30 - 18h / 22h </span></i>
+      </div>
+
+      <div class="languages d-none d-md-flex align-items-center">
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+    <h1 class="logo me-auto me-lg-0"><a href="index.html">B & B Sarl</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+        <li><a class="nav-link scrollto" href="#about">À propos</a></li>
+        <li><a class="nav-link scrollto" href="#apartments">Nos Appartements</a></li>
+        <li><a class="nav-link scrollto" href="#locations">Destinations</a></li>
+        <li><a class="nav-link scrollto" href="#reviews">Avis Clients</a></li>
+        <li><a class="nav-link scrollto" href="#gallery">Galerie</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <a href="#book-now" class="book-now-btn scrollto d-none d-lg-flex">Réserver</a>
+
+  </div>
+</header><!-- End Header -->
+
+
+  <!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-8">
+        <h1>Bienvenue chez <span>B & B Sarl</span></h1>
+        <h2>Réservez des appartements meublés confortables dans les meilleures destinations du monde.</h2>
+
+        <div class="btns">
+          <a href="#apartments" class="btn-apartments animated fadeInUp scrollto">Nos Appartements</a>
+          <a href="#book-now" class="btn-book animated fadeInUp scrollto">Réservez Maintenant</a>
+        </div>
+      </div>
+      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+        <a href="#" class="glightbox play-btn"></a>
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+  <main id="main">
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+        <div class="about-img">
+          <img src="{% static 'img/about.jpg' %}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+        <h3>Découvrez nos Appartements Meublés à Travers le Monde.</h3>
+        <p class="fst-italic">
+          Bienvenue chez B & B Sarl, votre destination pour la réservation d'appartements meublés de qualité, dans les villes les plus prisées du monde.
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> Confort et modernité dans chaque appartement.</li>
+          <li><i class="bi bi-check-circle"></i> Des emplacements de choix au cœur des grandes villes.</li>
+          <li><i class="bi bi-check-circle"></i> Réservation simple et rapide en quelques clics.</li>
+        </ul>
+        <p>
+          Chez B & B Sarl, nous vous offrons plus qu'un logement temporaire, nous vous offrons une expérience de vie inoubliable. Que vous voyagiez pour les affaires ou pour le plaisir, nos appartements meublés sont conçus pour répondre à vos besoins et vous offrir le confort de chez vous.
+          Réservez dès maintenant et découvrez la liberté de voyager avec style.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Why Us</h2>
+          <p>Pourquoi choisir B & B Sarl</p>
+        </div>
+    
+        <div class="row">
+    
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Appartements Confortables et Bien Équipés</h4>
+              <p>Nos appartements sont entièrement meublés et équipés pour répondre à tous vos besoins, que ce soit pour un séjour court ou long terme.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Emplacements Idéaux</h4>
+              <p>Nous vous offrons des appartements situés dans les meilleurs quartiers des grandes villes, à proximité des attractions et des commodités locales.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4>Réservation Simple et Sécurisée</h4>
+              <p>Avec notre plateforme facile à utiliser, vous pouvez réserver rapidement et en toute sécurité votre appartement idéal en seulement quelques clics.</p>
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section><!-- End Why Us Section -->
+    
+
+    <!-- ======= Menu Section ======= -->
+    <section id="apartments" class="apartments section-bg">
+      <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+          <h2>Nos Appartements</h2>
+          <p>Découvrez nos appartements meublés</p>
+        </div>
+    
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="apartment-filters">
+              <li data-filter="*" class="filter-active">Tous</li>
+              <li data-filter=".filter-studio">Studios</li>
+              <li data-filter=".filter-one-bedroom">Appartements 1 Chambre</li>
+              <li data-filter=".filter-luxury">Appartements de Luxe</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="row apartment-container" data-aos="fade-up" data-aos-delay="200">
+    
+          <div class="col-lg-6 apartment-item filter-studio">
+            <img src="{% static 'img/apartments/studio1.jpg' %}" class="apartment-img" alt="">
+            <div class="apartment-content">
+              <a href="#">Studio Moderne</a><span>$80/nuit</span>
+            </div>
+            <div class="apartment-details">
+              Studio cosy avec vue sur la ville, équipé d'une kitchenette moderne.
+            </div>
+          </div>
+    
+          <div class="col-lg-6 apartment-item filter-luxury">
+            <img src="{% static 'img/apartments/luxury1.jpg' %}" class="apartment-img" alt="">
+            <div class="apartment-content">
+              <a href="#">Appartement de Luxe</a><span>$250/nuit</span>
+            </div>
+            <div class="apartment-details">
+              Appartement spacieux avec terrasse privée et vue panoramique.
+            </div>
+          </div>
+    
+          <div class="col-lg-6 apartment-item filter-one-bedroom">
+            <img src="{% static 'img/apartments/one-bedroom1.jpg' %}" class="apartment-img" alt="">
+            <div class="apartment-content">
+              <a href="#">Appartement 1 Chambre</a><span>$120/nuit</span>
+            </div>
+            <div class="apartment-details">
+              Appartement d'une chambre avec salon séparé, idéal pour les familles.
+            </div>
+          </div>
+    
+          <div class="col-lg-6 apartment-item filter-studio">
+            <img src="{% static 'img/apartments/studio2.jpg' %}" class="apartment-img" alt="">
+            <div class="apartment-content">
+              <a href="#">Studio Élégant</a><span>$90/nuit</span>
+            </div>
+            <div class="apartment-details">
+              Studio moderne et lumineux avec accès rapide aux transports en commun.
+            </div>
+          </div>
+    
+          <div class="col-lg-6 apartment-item filter-one-bedroom">
+            <img src="{% static 'img/apartments/one-bedroom2.jpg' %}" class="apartment-img" alt="">
+            <div class="apartment-content">
+              <a href="#">Appartement 1 Chambre</a><span>$130/nuit</span>
+            </div>
+            <div class="apartment-details">
+              Appartement meublé avec balcon et cuisine entièrement équipée.
+            </div>
+          </div>
+    
+          <div class="col-lg-6 apartment-item filter-luxury">
+            <img src="{% static 'img/apartments/luxury2.jpg' %}" class="apartment-img" alt="">
+            <div class="apartment-content">
+              <a href="#">Penthouse Exclusif</a><span>$300/nuit</span>
+            </div>
+            <div class="apartment-details">
+              Penthouse avec jacuzzi privé, vue sur la mer et services premium.
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section><!-- End Apartments Section -->
+    
+
+<!-- ======= Offers Section ======= -->
+<section id="specials" class="specials">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Offres Spéciales</h2>
+      <p>Nos meilleures offres</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Studio Cosy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Appartement Familial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Suite de Luxe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Penthouse Vue Mer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Loft Urbain</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 mt-4 mt-lg-0">
+        <div class="tab-content">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Studio Cosy au cœur de la ville</h3>
+                <p class="fst-italic">Un studio moderne et élégant, idéal pour les couples ou les voyageurs en solo.</p>
+                <p>Profitez d'un espace confortable avec toutes les commodités, à deux pas des principales attractions touristiques. Parfait pour un court séjour en ville.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/specials/studio.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Appartement Familial avec Jardin</h3>
+                <p class="fst-italic">Un espace spacieux, idéal pour les familles souhaitant un séjour agréable et pratique.</p>
+                <p>Doté de deux chambres, d'un salon confortable, et d'un jardin privé, cet appartement est parfait pour un séjour en famille dans un quartier calme.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/specials/family.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-3">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Suite de Luxe avec Vue Panoramique</h3>
+                <p class="fst-italic">Une suite luxueuse offrant une vue imprenable sur la ville, avec toutes les commodités.</p>
+                <p>Vivez une expérience inoubliable dans cette suite élégante et moderne, idéale pour un séjour haut de gamme.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/specials/luxury.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-4">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Penthouse Vue sur la Mer</h3>
+                <p class="fst-italic">Un penthouse exclusif avec terrasse privée et vue sur la mer.</p>
+                <p>Profitez de cette oasis de luxe, avec un grand salon, une cuisine ouverte et une terrasse offrant une vue imprenable sur l'océan.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/specials/penthouse.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="tab-5">
+            <div class="row">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Loft Urbain</h3>
+                <p class="fst-italic">Un loft contemporain dans le cœur battant de la ville.</p>
+                <p>Parfait pour les voyageurs d'affaires ou les amateurs d'architecture moderne, ce loft allie design et confort pour un séjour unique.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'img/specials/loft.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Offers Section -->
+
+
+<!-- ======= Events Section ======= -->
+<section id="events" class="events">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Événements</h2>
+      <p>Organisez Vos Événements dans Nos Appartements de Luxe</p>
+    </div>
+
+    <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/event-birthday.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Fêtes d'Anniversaire</h3>
+              <div class="price">
+                <p><span>À partir de 189€</span></p>
+              </div>
+              <p class="fst-italic">
+                Organisez une fête d'anniversaire mémorable dans l'un de nos appartements spacieux et élégants, adaptés à tous vos besoins.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> Appartements décorés selon vos préférences.</li>
+                <li><i class="bi bi-check-circled"></i> Service traiteur sur demande.</li>
+                <li><i class="bi bi-check-circled"></i> Espace pour danser et profiter de la soirée.</li>
+              </ul>
+              <p>
+                Profitez d'une expérience unique avec une vue imprenable et tout le confort d'une location de prestige pour vos événements privés.
+              </p>
+            </div>
+          </div>
+        </div><!-- End event item -->
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/event-private.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Soirées Privées</h3>
+              <div class="price">
+                <p><span>À partir de 290€</span></p>
+              </div>
+              <p class="fst-italic">
+                Louez un appartement luxueux pour vos soirées privées et profitez d'un espace intime et raffiné pour vos invités.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> Vue panoramique depuis nos penthouses.</li>
+                <li><i class="bi bi-check-circled"></i> Organisation clé en main, avec options d'aménagement personnalisées.</li>
+                <li><i class="bi bi-check-circled"></i> Espace intérieur et extérieur pour des réceptions en toute élégance.</li>
+              </ul>
+              <p>
+                Faites de votre soirée un événement inoubliable dans un cadre prestigieux, entièrement privatisé pour vous.
+              </p>
+            </div>
+          </div>
+        </div><!-- End event item -->
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/event-custom.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Événements Personnalisés</h3>
+              <div class="price">
+                <p><span>À partir de 99€</span></p>
+              </div>
+              <p class="fst-italic">
+                Que ce soit un dîner intime, un événement d'entreprise ou une célébration spéciale, nos appartements s'adaptent à tous vos besoins.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> Aménagements sur mesure pour des événements uniques.</li>
+                <li><i class="bi bi-check-circled"></i> Options de restauration et de divertissement.</li>
+                <li><i class="bi bi-check-circled"></i> Espaces flexibles, parfaits pour toutes les occasions.</li>
+              </ul>
+              <p>
+                Créez l'événement de vos rêves dans l'un de nos lieux exclusifs, avec des prestations à la hauteur de vos attentes.
+              </p>
+            </div>
+          </div>
+        </div><!-- End event item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Events Section -->
+
+
+    <!-- ======= Book A Table Section ======= -->
+    <section id="book-an-apartment" class="book-an-apartment">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Réservation</h2>
+          <p>Réservez Votre Appartement Chez Nous (jusqu'à 5 personnes maximum)</p>
+        </div>
+    
+        <form id="reservation-form" action="#" method="post" role="form">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-lg-4 col-md-6 form-group">
+              {{ form.name }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              {{ form.email }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
+              {{ form.phone }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              {{ form.check_in_date }}
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="number" id="stay-duration" class="form-control" placeholder="Nombre de nuits" min="1" required>
+              <div class="validate"></div>
+            </div>
+            <div class="col-lg-4 col-md-6 form-group mt-3">
+              <input type="text" id="check_out_date" class="form-control" placeholder="Date de départ" readonly>
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            {{ form.message }}
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading"></div>
+            <div class="error-message"></div>
+            {% if success %}
+            <div class="alert alert-success">
+              Votre demande de réservation a été envoyée. Nous vous appellerons ou vous enverrons un e-mail pour confirmer votre réservation. Merci !
+            </div>
+            {% endif %}
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert {{ message.tags }}">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <div class="text-center">
+            <button type="button" id="preview-btn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservationModal">Réserver</button>
+          </div>
+        </form>
+    
+        <!-- Modal -->
+        <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="reservationModalLabel">Détails de la Réservation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="apartment-details">
+                  <img src="{% static 'img/apartment.jpg' %}" class="img-fluid" alt="Appartement">
+                  <h4 id="apartment-name">Nom de l'appartement</h4>
+                  <p><strong>Prix:</strong> <span id="apartment-price">$150</span></p>
+                  <p id="reservation-message"></p>
+                  <p><strong>Date de réservation:</strong> <span id="reservation-date"></span></p>
+                  <p><strong>Date de départ:</strong> <span id="reservation-checkout-date"></span></p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                <button type="submit" class="btn btn-primary">Confirmer la Réservation</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section><!-- End Book An Apartment Section -->
+    
+    <script>
+      // Script pour gérer la mise à jour automatique de la date de départ
+      document.getElementById('stay-duration').addEventListener('input', function () {
+        const checkInDate = new Date(document.getElementById('reservation-form').elements['check_in_date'].value);
+        const stayDuration = parseInt(this.value);
+        const checkOutDate = new Date(checkInDate);
+        checkOutDate.setDate(checkOutDate.getDate() + stayDuration);
+        
+        document.getElementById('check_out_date').value = checkOutDate.toLocaleDateString();
+        document.getElementById('reservation-checkout-date').textContent = checkOutDate.toLocaleDateString();
+      });
+    
+      // Script pour afficher les détails de la réservation dans le modal
+      document.getElementById('preview-btn').addEventListener('click', function () {
+        const checkInDate = document.getElementById('reservation-form').elements['check_in_date'].value;
+        const stayDuration = document.getElementById('stay-duration').value;
+        const reservationDate = new Date();
+        
+        document.getElementById('reservation-date').textContent = reservationDate.toLocaleDateString();
+        document.getElementById('reservation-message').textContent = `Veuillez noter que la réservation n'est valide que pendant 3 jours.`;
+        
+        // Ajustez le nom de l'appartement et le prix en fonction de votre application
+        document.getElementById('apartment-name').textContent = 'Appartement Luxueux';
+        document.getElementById('apartment-price').textContent = '$150';
+      });
+    </script>
+    
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Testimonials</h2>
+      <p>Ce qu'ils disent de nous</p>
+    </div>
+
+    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "Séjourner à B & B Sarl a été une expérience incroyable ! L'appartement était non seulement élégant, mais aussi très bien situé. Chaque détail a été soigneusement pensé, ce qui a rendu notre séjour vraiment spécial."
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Saul Goodman</h3>
+            <h4>Client Satisfait</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "B & B Sarl a vraiment élevé la barre en matière d'hébergement. Nous avons adoré le service personnalisé et l'attention portée aux détails. Nous reviendrons sans hésiter !"
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Sara Wilsson</h3>
+            <h4>Voyageuse Fréquent</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "L'appartement était tout simplement magnifique ! Le confort et le luxe étaient au rendez-vous. Merci B & B Sarl pour un séjour inoubliable."
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Jena Karlis</h3>
+            <h4>Blogueuse de Voyage</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "Je recommande vivement B & B Sarl à tous ceux qui cherchent un endroit où séjourner. Un service exceptionnel et des logements impeccables."
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Matt Brandon</h3>
+            <h4>Entrepreneur</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "Un séjour parfait ! Les appartements sont d'une propreté impeccable et très bien équipés. B & B Sarl, vous avez gagné un client fidèle !"
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="" >
+            <h3>John Larson</h3>
+            <h4>Client Régulier</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Testimonials Section -->
+
+
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery">
+
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Galerie</h2>
+      <p>Découvrez notre sélection d'appartements et de lieux de séjour chez B & B Sarl</p>
+    </div>
+  </div>
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row g-0">
+
+      {% for image in gallery_images %}
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="{{ image.url }}" class="gallery-lightbox" data-gall="gallery-item">
+            <img src="{{ image.url }}" alt="{{ image.alt }}" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section><!-- End Gallery Section -->
+
+
+<!-- ======= Chefs Section ======= -->
+<section id="chefs" class="chefs">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Dirigeants</h2>
+      <p>Nos Dirigeants</p>
+    </div>
+
+    <div class="row">
+      {% for leader in leaders %}
+      <div class="col-lg-4 col-md-6">
+        <div class="member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:1|add:100 }}">
+          <img src="{% static leader.photo %}" class="img-fluid" alt="{{ leader.name }}">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>{{ leader.name }}</h4>
+              <span>{{ leader.position }}</span>
+            </div>
+            <div class="social">
+              <a href="{{ leader.social_links.twitter }}"><i class="bi bi-twitter"></i></a>
+              <a href="{{ leader.social_links.facebook }}"><i class="bi bi-facebook"></i></a>
+              <a href="{{ leader.social_links.instagram }}"><i class="bi bi-instagram"></i></a>
+              <a href="{{ leader.social_links.linkedin }}"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- End Chefs Section -->
+
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Contactez-nous</h2>
+      <p>Nous serions ravis de vous entendre !</p>
+    </div>
+  </div>
+
+  <div data-aos="fade-up">
+    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="container mt-5" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Adresse:</h4>
+            <p>La Corte 1642, Cannaregio, Venise, Italie</p>
+          </div>
+
+          <div class="open-hours">
+            <i class="bi bi-clock"></i>
+            <h4>Heures d'ouverture:</h4>
+            <p>
+              Lundi - Samedi:<br>
+              11:30 AM - 14:30 PM<br>
+              18:30 - 23:00 PM
+            </p>
+          </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p><a href="mailto:info@B & B Sarl.com">info@B & B Sarl.com</a></p>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Téléphone:</h4>
+            <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Chargement...</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Votre message a été envoyé. Merci!</div>
+          </div>
+          <div class="text-center"><button type="submit">Envoyer le Message</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-info">
+            <h3>B & B Sarl</h3>
+            <p>
+              La Corte 1642<br>
+              Cannaregio, Venise, Italie<br><br>
+              <strong>Téléphone:</strong> <a href="tel:+155895548855">+1 5589 55488 55</a><br>
+              <strong>Email:</strong> <a href="mailto:info@B & B Sarl.com">info@B & B Sarl.com</a><br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h4>Liens Utiles</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">À propos</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Conditions d'utilisation</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Hébergement</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Visites Guidées</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Transport</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Événements Spéciaux</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Assistance Client</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Notre Newsletter</h4>
+          <p>Inscrivez-vous pour recevoir les dernières nouvelles et offres spéciales.</p>
+          <form action="" method="post">
+            <input type="email" name="email" placeholder="Votre Email" required>
+            <input type="submit" value="S'abonner">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong><span>B & B Sarl</span></strong>. Tous droits réservés.
+    </div>
+    <div class="credits">
+      Conçu par <a href="#">BootstrapMade</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
