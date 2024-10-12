@@ -80,8 +80,7 @@
   </div>
 </header><!-- End Header -->
 
-
-  <!-- ======= Hero Section ======= -->
+<!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex align-items-center">
   <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
     <div class="row">
@@ -110,7 +109,7 @@
     <div class="row">
       <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
         <div class="about-img">
-          <img src="{% static 'img/about.jpg' %}" alt="">
+          <img src="{% static "img/about.jpg" %}" alt="">
         </div>
       </div>
       <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
@@ -132,6 +131,7 @@
 
   </div>
 </section><!-- End About Section -->
+
 
     <!-- ======= Why Us Section ======= -->
     <section id="why-us" class="why-us">
@@ -172,193 +172,57 @@
     
       </div>
     </section><!-- End Why Us Section -->
-    
+ 
 
-    <!-- ======= Menu Section ======= -->
-    <section id="apartments" class="apartments section-bg">
-      <div class="container" data-aos="fade-up">
-    
-        <div class="section-title">
-          <h2>Nos Appartements</h2>
-          <p>Découvrez nos appartements meublés</p>
-        </div>
-    
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="apartment-filters">
-              <li data-filter="*" class="filter-active">Tous</li>
-              <li data-filter=".filter-studio">Studios</li>
-              <li data-filter=".filter-one-bedroom">Appartements 1 Chambre</li>
-              <li data-filter=".filter-luxury">Appartements de Luxe</li>
-            </ul>
-          </div>
-        </div>
-    
-        <div class="row apartment-container" data-aos="fade-up" data-aos-delay="200">
-    
-          <div class="col-lg-6 apartment-item filter-studio">
-            <img src="{% static 'img/apartments/studio1.jpg' %}" class="apartment-img" alt="">
-            <div class="apartment-content">
-              <a href="#">Studio Moderne</a><span>$80/nuit</span>
-            </div>
-            <div class="apartment-details">
-              Studio cosy avec vue sur la ville, équipé d'une kitchenette moderne.
-            </div>
-          </div>
-    
-          <div class="col-lg-6 apartment-item filter-luxury">
-            <img src="{% static 'img/apartments/luxury1.jpg' %}" class="apartment-img" alt="">
-            <div class="apartment-content">
-              <a href="#">Appartement de Luxe</a><span>$250/nuit</span>
-            </div>
-            <div class="apartment-details">
-              Appartement spacieux avec terrasse privée et vue panoramique.
-            </div>
-          </div>
-    
-          <div class="col-lg-6 apartment-item filter-one-bedroom">
-            <img src="{% static 'img/apartments/one-bedroom1.jpg' %}" class="apartment-img" alt="">
-            <div class="apartment-content">
-              <a href="#">Appartement 1 Chambre</a><span>$120/nuit</span>
-            </div>
-            <div class="apartment-details">
-              Appartement d'une chambre avec salon séparé, idéal pour les familles.
-            </div>
-          </div>
-    
-          <div class="col-lg-6 apartment-item filter-studio">
-            <img src="{% static 'img/apartments/studio2.jpg' %}" class="apartment-img" alt="">
-            <div class="apartment-content">
-              <a href="#">Studio Élégant</a><span>$90/nuit</span>
-            </div>
-            <div class="apartment-details">
-              Studio moderne et lumineux avec accès rapide aux transports en commun.
-            </div>
-          </div>
-    
-          <div class="col-lg-6 apartment-item filter-one-bedroom">
-            <img src="{% static 'img/apartments/one-bedroom2.jpg' %}" class="apartment-img" alt="">
-            <div class="apartment-content">
-              <a href="#">Appartement 1 Chambre</a><span>$130/nuit</span>
-            </div>
-            <div class="apartment-details">
-              Appartement meublé avec balcon et cuisine entièrement équipée.
-            </div>
-          </div>
-    
-          <div class="col-lg-6 apartment-item filter-luxury">
-            <img src="{% static 'img/apartments/luxury2.jpg' %}" class="apartment-img" alt="">
-            <div class="apartment-content">
-              <a href="#">Penthouse Exclusif</a><span>$300/nuit</span>
-            </div>
-            <div class="apartment-details">
-              Penthouse avec jacuzzi privé, vue sur la mer et services premium.
-            </div>
-          </div>
-    
-        </div>
-    
-      </div>
-    </section><!-- End Apartments Section -->
-    
 
-<!-- ======= Offers Section ======= -->
-<section id="specials" class="specials">
+<!-- ======= Menu Section (Appartements) ======= -->
+<section id="menu" class="menu section-bg">
   <div class="container" data-aos="fade-up">
 
+    <!-- Section Title -->
     <div class="section-title">
-      <h2>Offres Spéciales</h2>
-      <p>Nos meilleures offres</p>
+      <h2>Nos Appartements</h2>
+      <p>Découvrez nos appartements meublés</p>
     </div>
 
+    <!-- Apartment Filters -->
     <div class="row" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-3">
-        <ul class="nav nav-tabs flex-column">
-          <li class="nav-item">
-            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Studio Cosy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Appartement Familial</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Suite de Luxe</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Penthouse Vue Mer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Loft Urbain</a>
-          </li>
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="menu-flters" class="d-flex list-unstyled gap-3">
+          <li data-filter="*" class="filter-active">Tous</li>
+          <li data-filter=".filter-studio">Studios</li>
+          <li data-filter=".filter-one-bedroom">Appartements 1 Chambre</li>
+          <li data-filter=".filter-luxury">Appartements de Luxe</li>
         </ul>
       </div>
-      <div class="col-lg-9 mt-4 mt-lg-0">
-        <div class="tab-content">
-          <div class="tab-pane active show" id="tab-1">
-            <div class="row">
-              <div class="col-lg-8 details order-2 order-lg-1">
-                <h3>Studio Cosy au cœur de la ville</h3>
-                <p class="fst-italic">Un studio moderne et élégant, idéal pour les couples ou les voyageurs en solo.</p>
-                <p>Profitez d'un espace confortable avec toutes les commodités, à deux pas des principales attractions touristiques. Parfait pour un court séjour en ville.</p>
-              </div>
-              <div class="col-lg-4 text-center order-1 order-lg-2">
-                <img src="{% static 'img/specials/studio.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-8 details order-2 order-lg-1">
-                <h3>Appartement Familial avec Jardin</h3>
-                <p class="fst-italic">Un espace spacieux, idéal pour les familles souhaitant un séjour agréable et pratique.</p>
-                <p>Doté de deux chambres, d'un salon confortable, et d'un jardin privé, cet appartement est parfait pour un séjour en famille dans un quartier calme.</p>
-              </div>
-              <div class="col-lg-4 text-center order-1 order-lg-2">
-                <img src="{% static 'img/specials/family.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-3">
-            <div class="row">
-              <div class="col-lg-8 details order-2 order-lg-1">
-                <h3>Suite de Luxe avec Vue Panoramique</h3>
-                <p class="fst-italic">Une suite luxueuse offrant une vue imprenable sur la ville, avec toutes les commodités.</p>
-                <p>Vivez une expérience inoubliable dans cette suite élégante et moderne, idéale pour un séjour haut de gamme.</p>
-              </div>
-              <div class="col-lg-4 text-center order-1 order-lg-2">
-                <img src="{% static 'img/specials/luxury.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-4">
-            <div class="row">
-              <div class="col-lg-8 details order-2 order-lg-1">
-                <h3>Penthouse Vue sur la Mer</h3>
-                <p class="fst-italic">Un penthouse exclusif avec terrasse privée et vue sur la mer.</p>
-                <p>Profitez de cette oasis de luxe, avec un grand salon, une cuisine ouverte et une terrasse offrant une vue imprenable sur l'océan.</p>
-              </div>
-              <div class="col-lg-4 text-center order-1 order-lg-2">
-                <img src="{% static 'img/specials/penthouse.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane" id="tab-5">
-            <div class="row">
-              <div class="col-lg-8 details order-2 order-lg-1">
-                <h3>Loft Urbain</h3>
-                <p class="fst-italic">Un loft contemporain dans le cœur battant de la ville.</p>
-                <p>Parfait pour les voyageurs d'affaires ou les amateurs d'architecture moderne, ce loft allie design et confort pour un séjour unique.</p>
-              </div>
-              <div class="col-lg-4 text-center order-1 order-lg-2">
-                <img src="{% static 'img/specials/loft.jpg' %}" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div>
+    </div>
+
+    <!-- Apartments Grid -->
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+      {% for apartment in apartments %}
+      <div class="col-lg-6 menu-item filter-{{ apartment.category }}">
+
+        <!-- Apartment Image -->
+        <img src="{% static appartement.image.local %}" class="menu-img img-fluid" alt="{{ apartment.image.name }}" style="object-fit: cover; height: 300px;">
+
+        <!-- Apartment Details -->
+        <div class="menu-content d-flex justify-content-between align-items-center">
+          <a href="#">{{ apartment.name }}</a>
+          <span>{{ apartment.price_per_night }} FCFA / nuit</span>
         </div>
+
+        <!-- Apartment Description -->
+        <div class="menu-ingredients">
+          {{ apartment.description }}
+        </div>
+
       </div>
+      {% endfor %}
     </div>
 
   </div>
-</section><!-- End Offers Section -->
+</section><!-- End Menu Section (Appartements) -->
+
 
 
 <!-- ======= Events Section ======= -->
@@ -366,88 +230,30 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-title">
-      <h2>Événements</h2>
-      <p>Organisez Vos Événements dans Nos Appartements de Luxe</p>
+      <h2>Espace de détente</h2>
+      <p>Venez vous détendre et vous relaxer dans nos espaces de détente luxueux.</p>
     </div>
 
     <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
       <div class="swiper-wrapper">
-
+        {% for espace in espaces %}
         <div class="swiper-slide">
           <div class="row event-item">
             <div class="col-lg-6">
-              <img src="{% static 'img/event-birthday.jpg' %}" class="img-fluid" alt="">
+              <img src="{% static 'img/SCI/IMG_7373.jpg' %}" class="img-fluid" alt="{{ espace.titre }}">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Fêtes d'Anniversaire</h3>
+              <h3>{{ espace.titre }}</h3>
               <div class="price">
-                <p><span>À partir de 189€</span></p>
+                <p><span>À partir de {{ espace.prix }} €</span></p>
               </div>
               <p class="fst-italic">
-                Organisez une fête d'anniversaire mémorable dans l'un de nos appartements spacieux et élégants, adaptés à tous vos besoins.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circled"></i> Appartements décorés selon vos préférences.</li>
-                <li><i class="bi bi-check-circled"></i> Service traiteur sur demande.</li>
-                <li><i class="bi bi-check-circled"></i> Espace pour danser et profiter de la soirée.</li>
-              </ul>
-              <p>
-                Profitez d'une expérience unique avec une vue imprenable et tout le confort d'une location de prestige pour vos événements privés.
+                {{ espace.description }}
               </p>
             </div>
           </div>
         </div><!-- End event item -->
-
-        <div class="swiper-slide">
-          <div class="row event-item">
-            <div class="col-lg-6">
-              <img src="{% static 'img/event-private.jpg' %}" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Soirées Privées</h3>
-              <div class="price">
-                <p><span>À partir de 290€</span></p>
-              </div>
-              <p class="fst-italic">
-                Louez un appartement luxueux pour vos soirées privées et profitez d'un espace intime et raffiné pour vos invités.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circled"></i> Vue panoramique depuis nos penthouses.</li>
-                <li><i class="bi bi-check-circled"></i> Organisation clé en main, avec options d'aménagement personnalisées.</li>
-                <li><i class="bi bi-check-circled"></i> Espace intérieur et extérieur pour des réceptions en toute élégance.</li>
-              </ul>
-              <p>
-                Faites de votre soirée un événement inoubliable dans un cadre prestigieux, entièrement privatisé pour vous.
-              </p>
-            </div>
-          </div>
-        </div><!-- End event item -->
-
-        <div class="swiper-slide">
-          <div class="row event-item">
-            <div class="col-lg-6">
-              <img src="{% static 'img/event-custom.jpg' %}" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Événements Personnalisés</h3>
-              <div class="price">
-                <p><span>À partir de 99€</span></p>
-              </div>
-              <p class="fst-italic">
-                Que ce soit un dîner intime, un événement d'entreprise ou une célébration spéciale, nos appartements s'adaptent à tous vos besoins.
-              </p>
-              <ul>
-                <li><i class="bi bi-check-circled"></i> Aménagements sur mesure pour des événements uniques.</li>
-                <li><i class="bi bi-check-circled"></i> Options de restauration et de divertissement.</li>
-                <li><i class="bi bi-check-circled"></i> Espaces flexibles, parfaits pour toutes les occasions.</li>
-              </ul>
-              <p>
-                Créez l'événement de vos rêves dans l'un de nos lieux exclusifs, avec des prestations à la hauteur de vos attentes.
-              </p>
-            </div>
-          </div>
-        </div><!-- End event item -->
-
+        {% endfor %}
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -572,6 +378,7 @@
     </script>
     
 
+
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials section-bg">
   <div class="container" data-aos="fade-up">
@@ -654,7 +461,7 @@
     </div>
 
   </div>
-</section><!-- End Testimonials Section -->
+</section><!-- End Testimonials Section --> 
 
 
 <!-- ======= Gallery Section ======= -->
@@ -674,8 +481,8 @@
       {% for image in gallery_images %}
       <div class="col-lg-3 col-md-4">
         <div class="gallery-item">
-          <a href="{{ image.url }}" class="gallery-lightbox" data-gall="gallery-item">
-            <img src="{{ image.url }}" alt="{{ image.alt }}" class="img-fluid">
+          <a href="#" class="gallery-lightbox" data-gall="gallery-item">
+            <img src="{% static image.url %}" alt="{{ image.alt }}" class="img-fluid">
           </a>
         </div>
       </div>
@@ -684,7 +491,7 @@
     </div>
 
   </div>
-</section><!-- End Gallery Section -->
+</section><!-- End Gallery Section --> 
 
 
 <!-- ======= Chefs Section ======= -->
@@ -762,7 +569,7 @@
           <div class="phone">
             <i class="bi bi-phone"></i>
             <h4>Téléphone:</h4>
-            <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+            <p><a href="tel:+155895548855">+237 622 333 266</a></p>
           </div>
         </div>
       </div>
@@ -810,8 +617,8 @@
             <p>
               La Corte 1642<br>
               Cannaregio, Venise, Italie<br><br>
-              <strong>Téléphone:</strong> <a href="tel:+155895548855">+1 5589 55488 55</a><br>
-              <strong>Email:</strong> <a href="mailto:info@B & B Sarl.com">info@B & B Sarl.com</a><br>
+              <strong>Téléphone:</strong> <a href="tel:+155895548855">+27 622 333 266</a><br>
+              <strong>Email:</strong> <a href="mailto:info@B & B Sarl.com">info@B&BSarl.com</a><br>
             </p>
             <div class="social-links mt-3">
               <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

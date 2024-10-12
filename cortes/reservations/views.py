@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from .forms import TableReservationForm
 from django.db.models import Sum
 from django.contrib import messages
-from .models import TableReservation
+from .models import Apartment, EspaceDeDetente, TableReservation
 from django.core.mail import send_mail
 from datetime import time
+from .ImageURL import MesImages
 
 
 import logging
@@ -12,21 +13,21 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def index(request):
+from django.shortcuts import render
+from .models import MyImage  # Assurez-vous d'importer votre modèle
 
-    gallery_images = [
-        {'url': 'img/gallery/gallery-1.jpg', 'alt': 'Appartement 1'},
-        {'url': 'img/gallery/gallery-2.jpg', 'alt': 'Appartement 2'},
-        {'url': 'img/gallery/gallery-3.jpg', 'alt': 'Appartement 3'},
-        {'url': 'img/gallery/gallery-4.jpg', 'alt': 'Appartement 4'},
-        {'url': 'img/gallery/gallery-5.jpg', 'alt': 'Appartement 5'},
-        {'url': 'img/gallery/gallery-6.jpg', 'alt': 'Appartement 6'},
-        {'url': 'img/gallery/gallery-7.jpg', 'alt': 'Appartement 7'},
-        {'url': 'img/gallery/gallery-8.jpg', 'alt': 'Appartement 8'},
+def index(request):
+    # Récupère toutes les images de la base de données
+    gallery_images = MyImage.objects.all()  # Cela renvoie un QuerySet de MyImage
+
+    # Vous pouvez également préparer une liste de dictionnaires si vous avez besoin de spécifier des clés personnalisées
+    gallery_images_list = [
+        {'url': image.local, 'alt': image.name} for image in gallery_images
     ]
+
     chefs = [
         {
-            'name': 'Alice Dubois',
+            'name': 'Leader 1',
             'position': 'Directrice Générale',
             'photo': 'img/chefs/chef-1.jpg',
             'social_links': {
@@ -37,7 +38,7 @@ def index(request):
             }
         },
         {
-            'name': 'Jean Dupont',
+            'name': 'Leader 2',
             'position': 'Directeur des Opérations',
             'photo': 'img/chefs/chef-2.jpg',
             'social_links': {
@@ -48,7 +49,7 @@ def index(request):
             }
         },
         {
-            'name': 'Claire Martin',
+            'name': 'Leader 2',
             'position': 'Responsable Marketing',
             'photo': 'img/chefs/chef-3.jpg',
             'social_links': {
@@ -59,7 +60,7 @@ def index(request):
             }
         },
         {
-            'name': 'Marc Lefevre',
+            'name': 'Leader 1',
             'position': 'Directeur Financier',
             'photo': 'img/chefs/chef-4.jpg',
             'social_links': {
@@ -70,8 +71,18 @@ def index(request):
             }
         },
     ]
+    print(gallery_images_list)
 
-    return render(request, 'index.html', {'gallery_images': gallery_images, 'chefs': chefs})
+    apartments = Apartment.objects.all()
+    espaces = EspaceDeDetente.objects.all()
+
+    # images = MyImage.objects.all()
+    # for image in images:
+    #     image.local = f"img/SCI/{image.name}.jpg"
+    #     image.save()
+
+    # print("Champs 'local' mis à jour avec succès.")
+    return render(request, 'index.html', {'gallery_images': gallery_images_list, 'leaders': chefs, "apartments": apartments, "Images":MesImages, "espaces":espaces})
 
 
 def book_table(request):
