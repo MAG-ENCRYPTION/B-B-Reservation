@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
+        <div class="about-img">
+          <img src="{% static "img/about.jpg" %}" alt="">
+        </div>
+      </div>
+      <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
+        <h3>Découvrez nos Appartements Meublés à Travers le Monde.</h3>
+        <p class="fst-italic">
+          Bienvenue chez B & B Sarl, votre destination pour la réservation d'appartements meublés de qualité, dans les villes les plus prisées du monde.
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> Confort et modernité dans chaque appartement.</li>
+          <li><i class="bi bi-check-circle"></i> Des emplacements de choix au cœur des grandes villes.</li>
+          <li><i class="bi bi-check-circle"></i> Réservation simple et rapide en quelques clics.</li>
+        </ul>
+        <p>
+          Chez B & B Sarl, nous vous offrons plus qu'un logement temporaire, nous vous offrons une expérience de vie inoubliable. Que vous voyagiez pour les affaires ou pour le plaisir, nos appartements meublés sont conçus pour répondre à vos besoins et vous offrir le confort de chez vous.
+          Réservez dès maintenant et découvrez la liberté de voyager avec style.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End About Section -->
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Why Us</h2>
+          <p>Pourquoi choisir B & B Sarl</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4">
+            <div class="box" data-aos="zoom-in" data-aos-delay="100">
+              <span>01</span>
+              <h4>Appartements Confortables et Bien Équipés</h4>
+              <p>Nos appartements sont entièrement meublés et équipés pour répondre à tous vos besoins, que ce soit pour un séjour court ou long terme.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="200">
+              <span>02</span>
+              <h4>Emplacements Idéaux</h4>
+              <p>Nous vous offrons des appartements situés dans les meilleurs quartiers des grandes villes, à proximité des attractions et des commodités locales.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0">
+            <div class="box" data-aos="zoom-in" data-aos-delay="300">
+              <span>03</span>
+              <h4>Réservation Simple et Sécurisée</h4>
+              <p>Avec notre plateforme facile à utiliser, vous pouvez réserver rapidement et en toute sécurité votre appartement idéal en seulement quelques clics.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+
+<!-- ======= Menu Section (Appartements) ======= -->
+<section id="menu" class="menu section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="section-title">
+      <h2>Nos Appartements</h2>
+      <p>Découvrez nos appartements meublés</p>
+    </div>
+
+    <!-- Apartment Filters -->
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="menu-flters" class="d-flex list-unstyled gap-3">
+          <li data-filter="*" class="filter-active">Tous</li>
+          <li data-filter=".filter-studio">Studios</li>
+          <li data-filter=".filter-one-bedroom">Appartements 1 Chambre</li>
+          <li data-filter=".filter-luxury">Appartements de Luxe</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Apartments Grid -->
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+      {% for apartment in apartments %}
+      <div class="col-lg-6 menu-item filter-{{ apartment.category }}">
+
+        <!-- Apartment Image -->
+        <img src="{% static appartement.image.local %}" class="menu-img img-fluid" alt="{{ apartment.image.name }}" style="object-fit: cover; height: 300px;">
+
+        <!-- Apartment Details -->
+        <div class="menu-content d-flex justify-content-between align-items-center">
+          <a href="#">{{ apartment.name }}</a>
+          <span>{{ apartment.price_per_night }} FCFA / nuit</span>
+        </div>
+
+        <!-- Apartment Description -->
+        <div class="menu-ingredients">
+          {{ apartment.description }}
+        </div>
+
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section><!-- End Menu Section (Appartements) -->
+
+
+
+<!-- ======= Events Section ======= -->
+<section id="events" class="events">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Espace de détente</h2>
+      <p>Venez vous détendre et vous relaxer dans nos espaces de détente luxueux.</p>
+    </div>
+
+    <div class="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        {% for espace in espaces %}
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/SCI/IMG_7373.jpg' %}" class="img-fluid" alt="{{ espace.titre }}">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>{{ espace.titre }}</h3>
+              <div class="price">
+                <p><span>À partir de {{ espace.prix }} €</span></p>
+              </div>
+              <p class="fst-italic">
+                {{ espace.description }}
+              </p>
+            </div>
+          </div>
+        </div><!-- End event item -->
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Events Section -->
+
+
+
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials section-bg">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Testimonials</h2>
+      <p>Ce qu'ils disent de nous</p>
+    </div>
+
+    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "Séjourner à B & B Sarl a été une expérience incroyable ! L'appartement était non seulement élégant, mais aussi très bien situé. Chaque détail a été soigneusement pensé, ce qui a rendu notre séjour vraiment spécial."
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Saul Goodman</h3>
+            <h4>Client Satisfait</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "B & B Sarl a vraiment élevé la barre en matière d'hébergement. Nous avons adoré le service personnalisé et l'attention portée aux détails. Nous reviendrons sans hésiter !"
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Sara Wilsson</h3>
+            <h4>Voyageuse Fréquent</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "L'appartement était tout simplement magnifique ! Le confort et le luxe étaient au rendez-vous. Merci B & B Sarl pour un séjour inoubliable."
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Jena Karlis</h3>
+            <h4>Blogueuse de Voyage</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "Je recommande vivement B & B Sarl à tous ceux qui cherchent un endroit où séjourner. Un service exceptionnel et des logements impeccables."
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="" >
+            <h3>Matt Brandon</h3>
+            <h4>Entrepreneur</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              "Un séjour parfait ! Les appartements sont d'une propreté impeccable et très bien équipés. B & B Sarl, vous avez gagné un client fidèle !"
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="" >
+            <h3>John Larson</h3>
+            <h4>Client Régulier</h4>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Testimonials Section -->
+
+
+<!-- ======= Gallery Section ======= -->
+<section id="gallery" class="gallery">
+
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Galerie</h2>
+      <p>Découvrez notre sélection d'appartements et de lieux de séjour chez B & B Sarl</p>
+    </div>
+  </div>
+
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row g-0">
+
+      {% for image in gallery_images %}
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="#" class="gallery-lightbox" data-gall="gallery-item">
+            <img src="{% static image.url %}" alt="{{ image.alt }}" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section><!-- End Gallery Section -->
+
+
+<!-- ======= Chefs Section ======= -->
+<section id="chefs" class="chefs">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Dirigeants</h2>
+      <p>Nos Dirigeants</p>
+    </div>
+
+    <div class="row">
+      {% for leader in leaders %}
+      <div class="col-lg-4 col-md-6">
+        <div class="member" data-aos="zoom-in" data-aos-delay="{{ forloop.counter0|add:1|add:100 }}">
+          <img src="{% static leader.photo %}" class="img-fluid" alt="{{ leader.name }}">
+          <div class="member-info">
+            <div class="member-info-content">
+              <h4>{{ leader.name }}</h4>
+              <span>{{ leader.position }}</span>
+            </div>
+            <div class="social">
+              <a href="{{ leader.social_links.twitter }}"><i class="bi bi-twitter"></i></a>
+              <a href="{{ leader.social_links.facebook }}"><i class="bi bi-facebook"></i></a>
+              <a href="{{ leader.social_links.instagram }}"><i class="bi bi-instagram"></i></a>
+              <a href="{{ leader.social_links.linkedin }}"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section><!-- End Chefs Section -->
+
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Contactez-nous</h2>
+      <p>Nous serions ravis de vous entendre !</p>
+    </div>
+  </div>
+
+  <div data-aos="fade-up">
+    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="container mt-5" data-aos="fade-up">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Adresse:</h4>
+            <p>La Corte 1642, Cannaregio, Venise, Italie</p>
+          </div>
+
+          <div class="open-hours">
+            <i class="bi bi-clock"></i>
+            <h4>Heures d'ouverture:</h4>
+            <p>
+              Lundi - Samedi:<br>
+              11:30 AM - 14:30 PM<br>
+              18:30 - 23:00 PM
+            </p>
+          </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p><a href="mailto:info@B & B Sarl.com">info@B & B Sarl.com</a></p>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Téléphone:</h4>
+            <p><a href="tel:+155895548855">+237 622 333 266</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Objet" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Chargement...</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Votre message a été envoyé. Merci!</div>
+          </div>
+          <div class="text-center"><button type="submit">Envoyer le Message</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section><!-- End Contact Section -->
+
+{% endblock content %}
