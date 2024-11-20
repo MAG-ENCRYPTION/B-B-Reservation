@@ -59,13 +59,13 @@
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
-        <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
-        <li><a class="nav-link scrollto" href="#about">À propos</a></li>
-        <li><a class="nav-link scrollto" href="#apartments">Nos Appartements</a></li>
-        <li><a class="nav-link scrollto" href="#locations">Destinations</a></li>
-        <li><a class="nav-link scrollto" href="#reviews">Avis Clients</a></li>
-        <li><a class="nav-link scrollto" href="#gallery">Galerie</a></li>
-        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto active" href="{% url 'index' %}">Accueil</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'index' %}#about">À propos</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'index' %}#apartments">Nos Appartements</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'index' %}#locations">Destinations</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'index' %}#reviews">Avis Clients</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'index' %}#gallery">Galerie</a></li>
+        <li><a class="nav-link scrollto" href="{% url 'index' %}#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -75,28 +75,11 @@
 </header><!-- End Header -->
 
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
-    <div class="row">
-      <div class="col-lg-8">
-        <h1>Bienvenue chez <span>B & B Sarl</span></h1>
-        <h2>Réservez des appartements meublés confortables dans les meilleures destinations du monde.</h2>
-
-        <div class="btns">
-          <a href="#apartments" class="btn-apartments animated fadeInUp scrollto">Nos Appartements</a>
-          <a href="#book-now" class="btn-book animated fadeInUp scrollto">Réservez Maintenant</a>
-        </div>
-      </div>
-      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
-        <a href="#" class="glightbox play-btn"></a>
-      </div>
-    </div>
-  </div>
-</section><!-- End Hero -->
+{% block content %}
 
 <main id="main">
 
-{% block content %} {% endblock content %}
+ {% endblock content %}
 
 </main><!-- End #main -->
 
@@ -127,11 +110,11 @@
         <div class="col-lg-2 col-md-6 footer-links">
           <h4>Liens Utiles</h4>
           <ul>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Accueil</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">À propos</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Conditions d'utilisation</a></li>
-            <li><i class="bx bx-chevron-right"></i> <a href="#">Politique de confidentialité</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#">Accueil</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#">À propos</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#">Conditions d'utilisation</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="{% url 'index' %}#">Politique de confidentialité</a></li>
           </ul>
         </div>
 

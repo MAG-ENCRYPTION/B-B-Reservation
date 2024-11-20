@@ -2,21 +2,57 @@
 {% load static %}
 {% block stylesheet %}
 <style>
+    /* Conteneur principal pour la galerie */
     .container {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 20px;
+        padding: 20px;
     }
-    .room {
-        border: 1px solid #ccc;
-        padding: 10px;
-        width: 300px;
-        text-align: center;
+
+    /* Style des éléments de la galerie */
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
     }
-    .room img {
+
+    .gallery-item img {
         width: 100%;
         height: auto;
+        transition: transform 0.3s ease;
     }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+        filter: brightness(70%);
+    }
+
+    /* Indication sur l'image */
+    .reserve-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .reserve-button {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    /* Style du modal */
     .modal {
         display: none;
         position: fixed;
@@ -27,19 +63,57 @@
         background: rgba(0, 0, 0, 0.7);
         justify-content: center;
         align-items: center;
+        z-index: 1000;
     }
+
     .modal-content {
         background: #fff;
         padding: 20px;
-        width: 400px;
-        border-radius: 5px;
-        text-align: center;
+        max-width: 500px;
+        border-radius: 10px;
+        text-align: left;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        position: relative;
     }
+
     .close-button {
-        float: right;
+        position: absolute;
+        top: 10px;
+        right: 10px;
         cursor: pointer;
-        font-size: 20px;
-        color: red;
+        font-size: 24px;
+        color: #e74c3c;
+    }
+
+    /* Section des informations */
+    .room-info {
+        margin-bottom: 20px;
+    }
+
+    /* Formulaire de réservation */
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    form input,
+    form button {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form button {
+        background-color: #3498db;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+        background-color: #2980b9;
     }
 </style>
 {% endblock %}
@@ -49,25 +123,32 @@
     document.addEventListener('DOMContentLoaded', () => {
         const modal = document.getElementById('reservation-modal');
         const closeButton = modal.querySelector('.close-button');
-        const roomImage = document.getElementById('modal-room-image');
+        const roomInfo = document.getElementById('room-info');
         const roomIdInput = document.getElementById('room-id');
 
+        // Ouvrir le modal avec les informations de l'appartement
         document.querySelectorAll('.reserve-button').forEach(button => {
             button.addEventListener('click', () => {
                 const roomId = button.getAttribute('data-room-id');
                 const roomImageSrc = button.getAttribute('data-room-image');
+                const roomDescription = button.getAttribute('data-room-description');
 
-                roomImage.src = roomImageSrc;
+                roomInfo.innerHTML = `
+                    <img src="${roomImageSrc}" alt="Image de l'appartement" style="width: 100%; border-radius: 10px;">
+                    <p><strong>Description :</strong> ${roomDescription}</p>
+                `;
+
                 roomIdInput.value = roomId;
-
                 modal.style.display = 'flex';
             });
         });
 
+        // Fermer le modal
         closeButton.addEventListener('click', () => {
             modal.style.display = 'none';
         });
 
+        // Fermer le modal si on clique en dehors
         window.addEventListener('click', (event) => {
             if (event.target === modal) {
                 modal.style.display = 'none';
@@ -79,46 +160,45 @@
 
 {% block content %}
 <section id="about" class="about">
-<div class="container">
-    {% for image in gallery_images %}
-    <div class="col-lg-3 col-md-4">
+    <div class="container">
+        {% for image in gallery_images %}
         <div class="gallery-item">
             <a href="#" class="reserve-button"
                data-room-id="{{ image.id }}"
-               data-room-image="{% static image.url %}">
-                <img src="{% static image.url %}" alt="{{ image.alt }}" class="img-fluid">
+               data-room-image="{% static image.url %}"
+               data-room-description="{{ image.description }}">
+                <span>Cliquez pour réserver</span>
             </a>
+            <img src="{% static image.url %}" alt="{{ image.alt }}">
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 
     <!-- Modal -->
     <div class="modal" id="reservation-modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
             <h2>Réserver une chambre</h2>
-            <img id="modal-room-image" src="" alt="Image de la chambre">
 
-            {% if reservation or apartment %}
-            <form id="reservation-form" method="POST" action="{% url 'payment' reservation.id apartment.id %}">
-            {% else %}
+            <!-- Informations sur l'appartement -->
+            <div id="room-info" class="room-info"></div>
+
             <form id="reservation-form" method="POST" action="#">
-            {% endif %}
                 {% csrf_token %}
                 <input type="hidden" name="room_id" id="room-id">
-                <label for="name">Nom :</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email :</label>
-                <input type="email" id="email" name="email" required>
+                <label for="name">Nom complet :</label>
+                <input type="text" id="name" name="name" placeholder="Entrez votre nom" required>
 
-                <label for="dates">Dates :</label>
+                <label for="phone">Numéro de téléphone :</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ex: +33 6 12 34 56 78" required>
+
+                <label for="dates">Date de réservation :</label>
                 <input type="date" id="dates" name="dates" required>
 
                 <button type="submit">Confirmer la réservation</button>
             </form>
         </div>
     </div>
-</div>
-    </section>
+</section>
 {% endblock %}
